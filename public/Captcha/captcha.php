@@ -28,7 +28,7 @@ for ($i = 0; $i <= 5; $i++) {
 
 }
 
-$host = mysqli_connect('localhost', 'root', '23122002', 'SYSBPS');
+$host = mysqli_connect('localhost', 'randigro_sysbps', 'Randi-328', 'randigro_sysbps');
 mysqli_query($host, 'TRUNCATE `SYSBPS_CAPTCHA`');
 mysqli_query($host, 'INSERT INTO `SYSBPS_CAPTCHA` (`captcha`) VALUES ('.$angka2.')' );
 imagepng($gbr);
