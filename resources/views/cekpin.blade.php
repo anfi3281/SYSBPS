@@ -2,7 +2,7 @@
     @if ($kode->kesempatan < 1 && $kode->kesempatan > 3)
         @php
             foreach ($auth as $log) {
-                $host = mysqli_connect('localhost', 'root', '23122002', 'SYSBPS');
+                $host = mysqli_connect('localhost', 'randigro_sysbps', 'Randi-328', 'randigro_sysbps');
                 mysqli_query($host, 'DELETE FROM `SYSBPS_AUTH`');
             }
         @endphp
@@ -18,7 +18,7 @@
                     for ($i = 0; $i < 9; $i++) {
                         $kode2 .= rand(1, 9);
                     }
-                    $host = mysqli_connect('localhost', 'root', '23122002', 'SYSBPS');
+                    $host = mysqli_connect('localhost', 'randigro_sysbps', 'Randi-328', 'randigro_sysbps');
                     mysqli_query($host, 'UPDATE `SYSBPS_LOGIN` SET `auth` = ' . $kode2 . '');
                 @endphp
                 <script>
@@ -30,7 +30,7 @@
                 foreach ($auth as $log) {
                     $jumlahkesempatan = $kode->kesempatan - 1;
                     $nama = $kode->username;
-                    $host = mysqli_connect('localhost', 'root', '23122002', 'SYSBPS');
+                    $host = mysqli_connect('localhost', 'randigro_sysbps', 'Randi-328', 'randigro_sysbps');
                     mysqli_query($host, 'UPDATE `SYSBPS_LOGIN` SET `kesempatan` = ' . $jumlahkesempatan . '');
                     $auten = $log->auth;
                 }

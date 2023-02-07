@@ -17,7 +17,7 @@
         @else
             @if ($aut->auth == $sesi1)
                 @php
-                    $host = mysqli_connect('localhost', 'root', '23122002', 'SYSBPS');
+                    $host = mysqli_connect('localhost', 'randigro_sysbps', 'Randi-328', 'randigro_sysbps');
                     $kesempatan_auth = $aut->kesempatan - 1;
                     mysqli_query($host, 'UPDATE `SYSBPS_AUTH` SET `kesempatan` = ' . $kesempatan_auth . ' WHERE `auth` = '.$sesi1.'');
                 @endphp

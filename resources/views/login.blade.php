@@ -4,7 +4,7 @@
             @if ($username == $log->username && $password == $log->password)
                 @php
                     $num = '';
-                    $host = mysqli_connect('localhost', 'root', '23122002', 'SYSBPS');
+                    $host = mysqli_connect('localhost', 'randigro_sysbps', 'Randi-328', 'randigro_sysbps');
 
                 @endphp
                 @if ($log->kesempatan < 1 && $log->kesempatan > 3)
